@@ -184,27 +184,10 @@
     background: radial-gradient(50% 50% at 50% 50%, #8b84c440 0%, #8b84c400 70%);
   }
   .video {
-    position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 14px;
+    position: relative; overflow: hidden; border-radius: 14px;
     background: #07060d; border: 1px solid var(--hairline);
     box-shadow: 0 40px 80px -30px #000, 0 0 0 1px #8b84c414;
-    transform: perspective(1400px) rotateY(-4deg) rotateX(2deg);
   }
-  .video.vertical { aspect-ratio: 9 / 16; max-width: 380px; margin-inline: auto; }
-  .video video, .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; object-fit: cover; background: #000; }
-  .placeholder {
-    position: absolute; inset: 0; display: grid; place-items: center; text-align: center; padding: 20px;
-    background:
-      radial-gradient(#e6e3f21a .5px, transparent .6px) 0 0 / 3px 3px,
-      radial-gradient(70% 60% at 50% 40%, #1c1a2e, #07060d 75%);
-  }
-  .play {
-    width: 72px; height: 72px; border-radius: 50%; margin: 0 auto 16px; display: grid; place-items: center;
-    background: var(--grad);
-    box-shadow: inset 0 1px #ffffff73, 0 0 0 10px #8b84c41f, 0 16px 40px -10px #8b84c4aa;
-  }
-  .play::after { content: ""; border-left: 22px solid #0b0a14; border-top: 13px solid transparent; border-bottom: 13px solid transparent; margin-left: 5px; }
-  .placeholder .display--md { font-size: clamp(1rem, 2vw, 1.25rem); }
-  .placeholder .fine { margin-top: .5rem; }
   .chip {
     position: absolute; z-index: 2;
     background: rgba(18,17,31,.88); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
@@ -214,7 +197,7 @@
   .chip__label { font-family: var(--font-mono), monospace; font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; color: var(--text-dim); }
   .chip__value { font-weight: 800; font-size: 1.35rem; font-variation-settings: "wdth" 112; letter-spacing: -.01em; }
   .chip--tl { top: -18px; left: -14px; }
-  .chip--br { bottom: -20px; right: -10px; }
+  .chip--tr { top: -18px; right: -10px; }
   @media (max-width: 600px) { .chip { display: none; } }
 
   /* offers */
@@ -326,29 +309,22 @@
       </div>
       <div class="video-wrap">
         <div class="chip chip--tl"><div class="chip__label">Spend $10 · Onyx</div><div class="chip__value money">+$100</div></div>
-        <!--
-          VIDEO SETUP — edit the data attributes below once the video is ready:
-            data-type="none"     -> shows the "dropping soon" placeholder (current)
-            data-type="file"     -> data-src="assets/abe-intro.mp4" or a full https:// URL
-                                    (optionally data-poster="assets/poster.jpg")
-            data-type="youtube"  -> data-src="YOUTUBE_VIDEO_ID"
-            data-type="vimeo"    -> data-src="VIMEO_VIDEO_ID"
-          Add data-vertical="true" if the video is 9:16 (TikTok / Reels style).
-        -->
-        <div class="video" id="abe-video"
-             data-type="none"
-             data-src=""
-             data-poster=""
-             data-vertical="false">
-          <div class="placeholder">
-            <div>
-              <div class="play" aria-hidden="true"></div>
-              <p class="display display--md">Abe's video drops soon</p>
-              <p class="fine">grab the offers below while they're live</p>
-            </div>
-          </div>
+        <div class="video">
+          <!-- Vidalytics embed -->
+          <div id="vidalytics_embed_7fSME5OEfPste0ag" style="width: 100%; position:relative; padding-top: 56.25%;"></div>
+          <script type="text/javascript">
+          (function (v, i, d, a, l, y, t, c, s) {
+              y='_'+d.toLowerCase();c=d+'L';if(!v[d]){v[d]={};}if(!v[c]){v[c]={};}if(!v[y]){v[y]={};}var vl='Loader',vli=v[y][vl],vsl=v[c][vl + 'Script'],vlf=v[c][vl + 'Loaded'],ve='Embed';
+              if (!vsl){vsl=function(u,cb){
+                  if(t){cb();return;}s=i.createElement("script");s.type="text/javascript";s.async=1;s.src=u;
+                  if(s.readyState){s.onreadystatechange=function(){if(s.readyState==="loaded"||s.readyState=="complete"){s.onreadystatechange=null;vlf=1;cb();}};}else{s.onload=function(){vlf=1;cb();};}
+                  i.getElementsByTagName("head")[0].appendChild(s);
+              };}
+              vsl(l+'loader.min.js',function(){if(!vli){var vlc=v[c][vl];vli=new vlc();}vli.loadScript(l+'player.min.js',function(){var vec=v[d][ve];t=new vec();t.run(a);});});
+          })(window, document, 'Vidalytics', 'vidalytics_embed_7fSME5OEfPste0ag', 'https://fast.vidalytics.com/embeds/FyeEOsmg/7fSME5OEfPste0ag/');
+          </script>
         </div>
-        <div class="chip chip--br"><div class="chip__label">Trade $10 · Polymarket</div><div class="chip__value money">+$25</div></div>
+        <div class="chip chip--tr"><div class="chip__label">Trade $10 · Polymarket</div><div class="chip__value money">+$25</div></div>
       </div>
       <div class="hero__body">
         <p class="prose">I cashed so many tickets the sportsbooks started coming to me — left and right. I didn't sign up for anything they threw at me. I negotiated. These are the best offers out there.</p>
@@ -516,24 +492,6 @@
 </div>
 
 <script>
-  // Video loader — reads config from #abe-video data attributes
-  (function () {
-    var el = document.getElementById('abe-video');
-    var type = el.dataset.type, src = el.dataset.src;
-    if (el.dataset.vertical === 'true') el.classList.add('vertical');
-    if (!src || type === 'none') return;
-    var html = '';
-    if (type === 'file') {
-      var poster = el.dataset.poster ? ' poster="' + el.dataset.poster + '"' : '';
-      html = '<video controls playsinline preload="metadata"' + poster + '><source src="' + src + '" type="video/mp4"></video>';
-    } else if (type === 'youtube') {
-      html = '<iframe src="https://www.youtube-nocookie.com/embed/' + src + '?rel=0&modestbranding=1&playsinline=1" title="Abe" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
-    } else if (type === 'vimeo') {
-      html = '<iframe src="https://player.vimeo.com/video/' + src + '?title=0&byline=0&portrait=0" title="Abe" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
-    }
-    if (html) el.innerHTML = html;
-  })();
-
   // Copy-code buttons
   document.querySelectorAll('.copy').forEach(function (btn) {
     btn.addEventListener('click', function () {
