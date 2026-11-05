@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All In Abe | Exclusive Sportsbook Offers</title>
+<meta name="description" content="Abe's exclusive sign-up offers. Trade $10 get $25 on Polymarket with code ABE. Spend $10 get $100 on Onyx Odds with code ABE100.">
+<meta property="og:title" content="All In Abe | Exclusive Sportsbook Offers">
+<meta property="og:description" content="Offers you can't get anywhere else. Sign up, deposit, DM Abe your screenshot.">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0b;
+    --bg-2: #121214;
+    --card: #16161a;
+    --line: #26262c;
+    --text: #f4f4f5;
+    --muted: #a1a1aa;
+    --gold: #f5c542;
+    --gold-2: #ffdf7a;
+    --green: #22c55e;
+    --radius: 18px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    background:
+      radial-gradient(900px 500px at 50% -10%, rgba(245,197,66,.16), transparent 60%),
+      radial-gradient(600px 400px at 100% 40%, rgba(34,197,94,.07), transparent 60%);
+    pointer-events: none;
+    z-index: -1;
+  }
+  a { color: inherit; }
+  [hidden] { display: none !important; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+  /* Top bar */
+  .topbar {
+    background: var(--gold);
+    color: #111;
+    text-align: center;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    padding: 9px 16px;
+  }
+  header.nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 0;
+  }
+  .logo {
+    font-family: Anton, Impact, sans-serif;
+    font-size: 26px;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .logo span { color: var(--gold); }
+  .pill {
+    font-size: 12px; font-weight: 700; color: var(--muted);
+    border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px;
+  }
+
+  /* Hero */
+  .hero { text-align: center; padding: 28px 0 24px; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 700; color: var(--gold);
+    text-transform: uppercase; letter-spacing: .12em;
+  }
+  .eyebrow .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px rgba(34,197,94,.2); animation: pulse 1.8s infinite; }
+  @keyframes pulse { 50% { box-shadow: 0 0 0 8px rgba(34,197,94,0); } }
+  h1 {
+    font-family: Anton, Impact, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: clamp(40px, 8vw, 84px);
+    line-height: .95;
+    margin: 14px 0 14px;
+    letter-spacing: .01em;
+  }
+  h1 .hl {
+    background: linear-gradient(180deg, var(--gold-2), var(--gold));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .sub { color: var(--muted); font-size: clamp(16px, 2.2vw, 19px); max-width: 620px; margin: 0 auto; }
+
+  /* Video */
+  .video-shell {
+    margin: 32px auto 0;
+    max-width: 880px;
+    border-radius: var(--radius);
+    padding: 2px;
+    background: linear-gradient(135deg, var(--gold), rgba(245,197,66,.15) 40%, rgba(255,255,255,.06));
+    box-shadow: 0 30px 80px -20px rgba(245,197,66,.25);
+  }
+  .video {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: calc(var(--radius) - 2px);
+    overflow: hidden;
+    background: #000;
+  }
+  .video video, .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; object-fit: cover; background: #000; }
+  .video.vertical { aspect-ratio: 9 / 16; max-width: 420px; margin: 0 auto; }
+  .placeholder {
+    position: absolute; inset: 0;
+    display: grid; place-items: center; text-align: center;
+    background:
+      repeating-linear-gradient(45deg, rgba(255,255,255,.02) 0 12px, transparent 12px 24px),
+      radial-gradient(circle at 50% 45%, #1c1c21, #08080a 70%);
+    padding: 20px;
+  }
+  .play {
+    width: 84px; height: 84px; border-radius: 50%;
+    background: var(--gold);
+    display: grid; place-items: center;
+    margin: 0 auto 16px;
+    box-shadow: 0 0 0 10px rgba(245,197,66,.15);
+  }
+  .play::after { content: ""; border-left: 26px solid #111; border-top: 16px solid transparent; border-bottom: 16px solid transparent; margin-left: 6px; }
+  .placeholder strong { display: block; font-family: Anton, Impact, sans-serif; font-weight: 400; font-size: clamp(22px, 3.5vw, 32px); text-transform: uppercase; letter-spacing: .02em; }
+  .placeholder small { color: var(--muted); font-size: 14px; }
+
+  .hero-cta { margin-top: 28px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    font-weight: 800; font-size: 16px; text-decoration: none;
+    padding: 16px 26px; border-radius: 12px; border: 0; cursor: pointer;
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .btn-gold { background: var(--gold); color: #111; box-shadow: 0 10px 30px -10px rgba(245,197,66,.6); }
+  .btn-gold:hover { background: var(--gold-2); transform: translateY(-2px); }
+  .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--line); }
+  .btn-ghost:hover { border-color: var(--muted); }
+  .btn-block { width: 100%; }
+
+  /* Sections */
+  section { padding: 64px 0; }
+  .section-head { text-align: center; margin-bottom: 36px; }
+  h2 {
+    font-family: Anton, Impact, sans-serif; font-weight: 400;
+    text-transform: uppercase; letter-spacing: .01em;
+    font-size: clamp(30px, 5vw, 48px); line-height: 1;
+  }
+  .section-head p { color: var(--muted); margin-top: 10px; }
+
+  /* Offers */
+  .offers { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .offer {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 28px;
+    display: flex; flex-direction: column;
+    transition: border-color .2s ease, transform .2s ease;
+  }
+  .offer:hover { border-color: rgba(245,197,66,.5); transform: translateY(-3px); }
+  .offer.featured { border-color: rgba(245,197,66,.45); background: linear-gradient(180deg, rgba(245,197,66,.07), var(--card) 40%); }
+  .badge {
+    position: absolute; top: -12px; right: 20px;
+    background: var(--green); color: #052e13;
+    font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+    padding: 5px 10px; border-radius: 999px;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-mark {
+    width: 44px; height: 44px; border-radius: 12px;
+    display: grid; place-items: center;
+    font-weight: 800; font-size: 18px;
+  }
+  .brand-name { font-weight: 800; font-size: 18px; }
+  .brand-tag { color: var(--muted); font-size: 13px; }
+  .deal { margin: 22px 0 6px; font-size: 15px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; }
+  .amount {
+    font-family: Anton, Impact, sans-serif; font-weight: 400;
+    font-size: clamp(44px, 7vw, 64px); line-height: 1; text-transform: uppercase;
+  }
+  .amount em { font-style: normal; color: var(--gold); }
+  .amount-sub { color: var(--muted); margin-top: 8px; font-size: 15px; }
+
+  .code {
+    margin: 22px 0 18px;
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    border: 1.5px dashed rgba(245,197,66,.55);
+    background: rgba(245,197,66,.06);
+    border-radius: 12px; padding: 10px 10px 10px 16px;
+  }
+  .code-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-weight: 700; }
+  .code-value { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 800; font-size: 22px; letter-spacing: .08em; color: var(--gold-2); }
+  .copy {
+    background: var(--bg-2); color: var(--text); border: 1px solid var(--line);
+    font-weight: 700; font-size: 13px; padding: 10px 14px; border-radius: 9px; cursor: pointer;
+    min-width: 76px;
+  }
+  .copy:hover { border-color: var(--muted); }
+  .copy.done { background: var(--green); color: #052e13; border-color: var(--green); }
+  .offer .btn { margin-top: auto; }
+  .fine { color: #71717a; font-size: 12px; margin-top: 12px; text-align: center; }
+
+  /* Steps */
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; counter-reset: step; }
+  .step {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 26px;
+  }
+  .step-num {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--gold); color: #111; font-weight: 800;
+    display: grid; place-items: center; margin-bottom: 16px;
+  }
+  .step h3 { font-size: 19px; margin-bottom: 6px; }
+  .step p { color: var(--muted); font-size: 15px; }
+
+  /* Quote */
+  .quote {
+    text-align: center; max-width: 760px; margin: 0 auto;
+    font-family: Anton, Impact, sans-serif; font-weight: 400; text-transform: uppercase;
+    font-size: clamp(26px, 4.4vw, 42px); line-height: 1.1;
+  }
+  .quote .hl { color: var(--gold); }
+  .quote-by { text-align: center; color: var(--muted); margin-top: 14px; font-weight: 600; }
+
+  /* Final CTA */
+  .final {
+    background: linear-gradient(135deg, rgba(245,197,66,.14), rgba(245,197,66,.02));
+    border: 1px solid rgba(245,197,66,.3);
+    border-radius: 24px;
+    padding: 44px 24px;
+    text-align: center;
+  }
+  .final p { color: var(--muted); margin: 12px auto 24px; max-width: 520px; }
+  .final .row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+  footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: #71717a; font-size: 12.5px; }
+  footer p + p { margin-top: 10px; }
+  footer strong { color: var(--muted); }
+
+  /* Sticky mobile CTA */
+  .sticky {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+    background: rgba(10,10,11,.92); backdrop-filter: blur(10px);
+    border-top: 1px solid var(--line);
+    display: none; z-index: 20;
+  }
+
+  @media (max-width: 820px) {
+    .offers, .steps { grid-template-columns: 1fr; }
+    section { padding: 48px 0; }
+    .sticky { display: block; }
+    body { padding-bottom: 80px; }
+    .pill { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">Exclusive codes: <u>ABE</u> &amp; <u>ABE100</u> — up to $125 free</div>
+
+<div class="wrap">
+  <header class="nav">
+    <a class="logo" href="#">All In <span>Abe</span></a>
+    <span class="pill">21+ · Play responsibly</span>
+  </header>
+
+  <!-- HERO + VIDEO -->
+  <div class="hero">
+    <div class="eyebrow"><span class="dot"></span> A message from Abe</div>
+    <h1>Your first steps to<br><span class="hl">getting rich</span></h1>
+    <p class="sub">I cashed so many tickets the sportsbooks started coming to me. I negotiated the best offers out there — offers you can't get anywhere else.</p>
+
+    <div class="video-shell">
+      <!--
+        VIDEO SETUP — edit the data attributes below once the video is ready:
+          data-type="none"     -> shows the "dropping soon" placeholder (current)
+          data-type="file"     -> data-src="assets/abe-intro.mp4" (optionally data-poster="assets/poster.jpg")
+          data-type="youtube"  -> data-src="YOUTUBE_VIDEO_ID"
+          data-type="vimeo"    -> data-src="VIMEO_VIDEO_ID"
+        Add data-vertical="true" if the video is 9:16 (TikTok / Reels style).
+      -->
+      <div class="video" id="abe-video"
+           data-type="none"
+           data-src=""
+           data-poster=""
+           data-vertical="false">
+        <div class="placeholder">
+          <div>
+            <div class="play" aria-hidden="true"></div>
+            <strong>Abe's video drops soon</strong>
+            <small>Grab the offers below while they're live</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="#offers">Claim up to $125 free ↓</a>
+    </div>
+  </div>
+</div>
+
+<!-- OFFERS -->
+<section id="offers">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Abe's exclusive offers</h2>
+      <p>Use my codes. Don't sign up anywhere without them.</p>
+    </div>
+
+    <div class="offers">
+      <!-- Onyx Odds -->
+      <article class="offer featured">
+        <span class="badge">Biggest bonus</span>
+        <div class="brand">
+          <div class="brand-mark" style="background:#18181b;border:1px solid #3f3f46;color:#fff;">OX</div>
+          <div>
+            <div class="brand-name">Onyx Odds</div>
+            <div class="brand-tag">Sportsbook</div>
+          </div>
+        </div>
+        <div class="deal">Spend $10, get</div>
+        <div class="amount"><em>$100</em> Free</div>
+        <div class="amount-sub">10x your first $10. That's the deal I negotiated.</div>
+        <div class="code">
+          <div>
+            <div class="code-label">Promo code</div>
+            <div class="code-value">ABE100</div>
+          </div>
+          <button class="copy" data-code="ABE100" type="button">Copy</button>
+        </div>
+        <a class="btn btn-gold btn-block" href="https://app.onyxodds.com/code/ABE100" target="_blank" rel="noopener sponsored" data-offer="onyx">Claim $100 on Onyx →</a>
+      </article>
+
+      <!-- Polymarket -->
+      <article class="offer">
+        <div class="brand">
+          <div class="brand-mark" style="background:#1652f0;color:#fff;">P</div>
+          <div>
+            <div class="brand-name">Polymarket</div>
+            <div class="brand-tag">Prediction market</div>
+          </div>
+        </div>
+        <div class="deal">Trade $10, get</div>
+        <div class="amount"><em>$25</em> Free</div>
+        <div class="amount-sub">Trade on sports, news &amp; more with free cash on top.</div>
+        <div class="code">
+          <div>
+            <div class="code-label">Promo code</div>
+            <div class="code-value">ABE</div>
+          </div>
+          <button class="copy" data-code="ABE" type="button">Copy</button>
+        </div>
+        <a class="btn btn-gold btn-block" href="https://polymarket-app.onelink.me/S8ac?af_xp=referral&amp;pid=&amp;c=All%20in%20Abe&amp;c=SMART&amp;deep_link_sub1=ABE" target="_blank" rel="noopener sponsored" data-offer="polymarket">Claim $25 on Polymarket →</a>
+      </article>
+    </div>
+    <p class="fine">New users only. Offer terms set by each operator — see their site for full details.</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>How it works</h2>
+      <p>Three steps. Takes five minutes.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Sign up with my link</h3>
+        <p>Tap an offer above and use code <strong>ABE</strong> or <strong>ABE100</strong> so it's tracked to me.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Make your deposit</h3>
+        <p>Drop in $10 to unlock your free bonus. Do both for up to $125 free.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>DM me a screenshot</h3>
+        <p>Send proof you signed up and I'll send you something special. 👀</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section>
+  <div class="wrap">
+    <p class="quote">"You've got something I never had when I started: <span class="hl">access to someone like me.</span>"</p>
+    <p class="quote-by">— Abe</p>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section>
+  <div class="wrap">
+    <div class="final">
+      <h2>See you inside.</h2>
+      <p>Sign up, make your deposit, then DM me a screenshot.</p>
+      <div class="row">
+        <a class="btn btn-gold" href="https://app.onyxodds.com/code/ABE100" target="_blank" rel="noopener sponsored" data-offer="onyx">Onyx — $100 free</a>
+        <a class="btn btn-gold" href="https://polymarket-app.onelink.me/S8ac?af_xp=referral&amp;pid=&amp;c=All%20in%20Abe&amp;c=SMART&amp;deep_link_sub1=ABE" target="_blank" rel="noopener sponsored" data-offer="polymarket">Polymarket — $25 free</a>
+      </div>
+      <!-- DM LINK: replace href with Abe's Instagram / X / TikTok DM link, then remove the "hidden" attribute -->
+      <div class="row" style="margin-top:12px">
+        <a class="btn btn-ghost" id="dm-link" href="#" target="_blank" rel="noopener" hidden>DM Abe your screenshot</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>21+ only. Gambling problem? Call 1-800-GAMBLER.</strong> Must be physically present in an eligible jurisdiction. Offers are available to new customers only and are subject to each operator's terms and conditions. Bonus funds/credits may carry wagering or usage requirements.</p>
+    <p>Affiliate disclosure: All In Abe may receive compensation when you sign up through the links on this page. Past results don't guarantee future winnings — never bet more than you can afford to lose.</p>
+    <p>© <span id="yr"></span> All In Abe</p>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a class="btn btn-gold btn-block" href="#offers">Claim up to $125 free</a>
+</div>
+
+<script>
+  // Video loader — reads config from #abe-video data attributes
+  (function () {
+    var el = document.getElementById('abe-video');
+    var type = el.dataset.type, src = el.dataset.src;
+    if (el.dataset.vertical === 'true') el.classList.add('vertical');
+    if (!src || type === 'none') return;
+    var html = '';
+    if (type === 'file') {
+      var poster = el.dataset.poster ? ' poster="' + el.dataset.poster + '"' : '';
+      html = '<video controls playsinline preload="metadata"' + poster + '><source src="' + src + '" type="video/mp4"></video>';
+    } else if (type === 'youtube') {
+      html = '<iframe src="https://www.youtube-nocookie.com/embed/' + src + '?rel=0&modestbranding=1&playsinline=1" title="Abe" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+    } else if (type === 'vimeo') {
+      html = '<iframe src="https://player.vimeo.com/video/' + src + '?title=0&byline=0&portrait=0" title="Abe" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
+    }
+    if (html) el.innerHTML = html;
+  })();
+
+  // Copy-code buttons
+  document.querySelectorAll('.copy').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var code = btn.dataset.code;
+      var done = function () {
+        btn.textContent = 'Copied!'; btn.classList.add('done');
+        setTimeout(function () { btn.textContent = 'Copy'; btn.classList.remove('done'); }, 1800);
+      };
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(code).then(done, done);
+      } else {
+        var t = document.createElement('textarea'); t.value = code; document.body.appendChild(t);
+        t.select(); try { document.execCommand('copy'); } catch (e) {} t.remove(); done();
+      }
+    });
+  });
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
